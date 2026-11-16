@@ -935,3 +935,43 @@ Git 不跟踪的 `obj_dir/` 和 `*.vcd` 等构建、波形产物不作为本次�
 **最近完成模块：08_alu**
 
 **当前唯一断点：完成 07、08 的两阶段 Git 与档案保存。**
+---
+
+### 15.9｜2026-11-16 第一次统一提交与远程同步记录
+
+本阶段工程与初步档案已完成第一次统一 Git 提交。
+
+**本地 Commit：**
+
+- Hash：`1299b5e`
+- Message：`Complete subtractor and ALU verification projects`
+- 变更统计：7 files changed, 1260 insertions(+), 1 deletion(-)
+
+**GitHub Push：**
+
+执行：
+
+```bash
+git push origin main
+```
+
+实际返回：
+
+```text
+53267af..1299b5e  main -> main
+```
+
+确认 Push 成功。
+
+远程仓库：
+
+`https://github.com/muanzhi2-a11y/digital-ic-verification-IC-`
+
+**当前保存阶段：**
+
+- C1：工程与初步学习档案统一提交，已完成。
+- C2：补充实际 Git 结果并进行最终文档提交，待完成。
+- 最终本地与远程同步检查，待完成。
+- 独立备份，尚未执行。
+
+注意：`1299b5e` 是 C1 的实际提交记录，不是最终 C2 提交编号。
