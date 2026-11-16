@@ -10,7 +10,7 @@ module tb_multi_bit_adder;
     .Cin(Cin),
     .S(S),
     .Cout(Cout)
-   );
+    );
    task check_case(
      input  [3:0] a_in,
      input  [3:0] b_in,
