@@ -1413,62 +1413,25 @@ always @(posedge clk or posedge rst)
 ---
 
 ## 16.7 工程保存与Git状态
-
-本次需要统一保存的工程源文件：
-
-```text
-12_Comparator_4bit/
-├── Comparator_4bit.v
-└── tb_Comparator_4bit.v
-
-13_D_Flip_Flop/
-├── D_Flip_Flop.v
-└── tb_D_Flip_Flop.v
-
-14_Reset_D_Flip_Flop/
-├── Reset_D_Flip_Flop.v
-├── tb_Reset_D_Flip_Flop.v
-├── Async_Reset_D_Flip_Flop.v
-└── tb_Async_Reset_D_Flip_Flop.v
-```
-
-源文件共8个。
-
-另需纳入：
-
-- `learning_docs/学习日志.md`
-- `learning_docs/数字IC验证学习总档案.md`
-
-保存流程：
+截至2026-11-23：
 
 **C1：工程与初步档案保存**
 
-- 追加学习日志。
-- 更新总档案。
-- 核对8个工程源文件。
-- 检查工作区和暂存区。
-- 完成Git Commit。
-- Push至GitHub。
-- 记录真实Commit Hash和Push结果。
+- Commit Hash：`9abf8f0`
+- Commit Message：`Complete RTL modules 12-14 and update learning records`
+- GitHub Push：成功。
+- 远程分支：`origin/main`。
+- C1：已完成。
 
 **C2：最终档案保存**
 
-- 根据C1实际结果补充日志和总档案。
-- 再次Commit。
-- Push。
-- 核验本地与远程同步。
+- 最终档案更新：待完成。
+- C2 Commit：待执行。
+- C2 Push：待执行。
+- 最终本地与远程同步核验：待执行。
+- 独立备份：尚未执行。
 
-截至本节整理时：
-
-- C1：待执行。
-- C1 Push：待执行。
-- C2：待执行。
-- 最终同步核验：待执行。
-- 独立备份：未执行。
-
-之前模块00～11的历史提交和保存记录保持不变，不重新初始化仓库，不覆盖历史提交。
-
----
+C2 Commit Hash 通过 Git 历史查询，不写入本次提交所包含的档案，避免自引用。
 
 ## 16.8 当前唯一学习断点
 
