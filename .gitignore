@@ -4,3 +4,4 @@ obj_dir/
 *.vvp
 *.log
 .DS_Store
+obj_dir_async/

@@ -1,0 +1,48 @@
+module tb_Reset_D_Flip_Flop;
+    reg clk;
+    reg d;
+    reg rst;
+    wire q;
+    Reset_D_Flip_Flop dut(
+     .clk(clk),
+     .d(d),
+     .rst(rst),
+     .q(q)
+    );
+    task check_case(
+     input expected_q
+     );
+     begin
+     if(q !== expected_q)
+     $fatal(1,"FAIL: d=%b q=%b",d,q);
+     else
+     $display("PASS: d=%b q=%b",d,q);
+     end
+    endtask
+    initial begin
+     clk = 0;
+        forever begin
+         #5 clk = ~ clk;
+        end
+    end
+    initial begin
+     $dumpfile("14_Reset_D_Flip_Flop/wave.vcd");
+     $dumpvars(0,tb_Reset_D_Flip_Flop);
+     d = 0;
+     rst = 0;
+     #6 check_case(1'b0);//6p
+     d = 1;
+     #8 check_case(1'b0);//14p
+     #2 check_case(1'b1);//16p
+     rst = 1;//16p
+     #1 check_case(1'b1);//17p
+     #7 check_case(1'b1);//24p
+     #2 check_case(1'b0);//26p
+     rst = 0;
+     d = 1;//26p
+     #1 check_case(1'b0);//27p
+     #7 check_case(1'b0);//34p
+     #6 check_case(1'b1);//40p
+     $finish;
+    end
+endmodule
